@@ -8,11 +8,14 @@
 	<context:property-placeholder location="classpath:profesori.properties"/>
 	
 	
-	<bean id = "profaPhyton" class="profesor.PhytonProfesor">
+	<bean id = "profaPython"
+		  class="profesor.PythonProfesor"
+		  scope="prototype"
+		  init-method="initMetoda">
 		<constructor-arg ref="predmetBaze"></constructor-arg>
 	</bean>
 	
-	<bean id = "profaJave" class="profesor.JavaProfesor">
+	<bean id = "profaJave" class="profesor.JavaProfesor" init-method="initMetoda" destroy-method="destroyMetoda">
 			<property name="predmet" ref="predmetJava"></property>
 			<property name="ime" value="${profa.java.ime}"></property>
 	</bean>

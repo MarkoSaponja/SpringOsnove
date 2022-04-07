@@ -31,5 +31,13 @@ public class JavaProfesor implements Profesor {
 	public void getPredmetKojiPredajem() {
 		predmet.dajMiPredmetPredmet();
 	}
+	
+	public void initMetoda() {
+		System.out.println("Preuzmi jezik...");
+	}
+	
+	public void destroyMetoda() {
+		System.out.println("Zatvori sve konekcije...");
+	}
 
 }

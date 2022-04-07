@@ -12,7 +12,7 @@ public class GlavnaKlasa {
 		profa.pozdrav();
 		profa.getPredmetKojiPredajem();
 		
-		Profesor profa2 = context.getBean("profaPhyton", Profesor.class);
+		Profesor profa2 = context.getBean("profaPython", Profesor.class);
 		profa2.pozdrav();
 		profa2.getPredmetKojiPredajem();
 		

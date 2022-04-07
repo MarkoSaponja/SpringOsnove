@@ -1,12 +1,12 @@
 package profesor;
 
-public class PhytonProfesor implements Profesor {
+public class PythonProfesor implements Profesor {
 
 	private Predmet predmet;
 	
 	
 
-	public PhytonProfesor(Predmet predmet) {
+	public PythonProfesor(Predmet predmet) {
 		this.predmet = predmet;
 	}
 
@@ -19,6 +19,9 @@ public class PhytonProfesor implements Profesor {
 	@Override
 	public void getPredmetKojiPredajem() {
 		predmet.dajMiPredmetPredmet();
+	}
+	public void initMetoda() {
+		System.out.println("Preuzmi jezik...");
 	}
 
 }
