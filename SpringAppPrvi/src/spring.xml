@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:property-placeholder location="classpath:profesori.properties"/>
+	
+	
+	<bean id = "profaPhyton" class="profesor.PhytonProfesor">
+		<constructor-arg ref="predmetBaze"></constructor-arg>
+	</bean>
+	
+	<bean id = "profaJave" class="profesor.JavaProfesor">
+			<property name="predmet" ref="predmetJava"></property>
+			<property name="ime" value="${profa.java.ime}"></property>
+	</bean>
+	
+	<bean id = "profaJave2" class="profesor.JavaProfesor">
+			<property name="predmet" ref="predmetJava"></property>
+			<property name="ime" value="Milan"></property>
+	</bean>
+
+	<bean id = "predmetBaze" class="profesor.Predmet">
+			<property name="nazivPredmeta" value="Baze podataka"></property>
+	</bean>
+
+	<bean id = "predmetJava" class="profesor.Predmet">
+			<property name="nazivPredmeta" value="Java napredni"></property>
+	</bean>
+
+
+
+
+</beans>
